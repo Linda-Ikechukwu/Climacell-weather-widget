@@ -10,28 +10,27 @@ import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles((theme) => ({
-    root:{
-      '& div':{
-          
-          '& svg': {
-              color: 'rgb(90, 182, 205)',
-              fontSize:'2rem',
-          },
-          '& span':{
-            fontSize:'2rem', 
-            fontfamily: 'Raleway !important',
-          }
-      }
+    root: {
+        '& div': {
+            '& svg': {
+                color: 'rgb(90, 182, 205)',
+                fontSize: '2rem',
+            },
+            '& span': {
+                fontSize: '2rem',
+                fontfamily: 'Raleway !important',
+            }
+        }
     }
 }));
 
 
 const ListItemLink = (props) => {
-    return <ListItem button component={Link} {...props}  />;
+    return <ListItem button component={Link} {...props} />;
 }
 
 const SubredditList = (props) => {
-    const { lists } = props;
+    const { lists, getPost } = props;
     const classes = useStyles();
 
     return (
@@ -41,8 +40,8 @@ const SubredditList = (props) => {
                     lists.map((list, index) => {
                         const subreddit = list.data.subreddit;
                         return (
-                            <Fragment>
-                                <ListItemLink  className={classes.root} button key={index} to={`/subreddits/${subreddit}`}>
+                            <Fragment key={index}>
+                                <ListItemLink onClick={() => getPost(list)} className={classes.root} button to={`/subreddits/${subreddit}`}>
                                     <ListItemIcon>
                                         <CategoryIcon />
                                     </ListItemIcon>
