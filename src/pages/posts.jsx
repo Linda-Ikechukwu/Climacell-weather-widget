@@ -1,6 +1,4 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import PostsList from '../components/posts-list';
 import SearchAppBar from '../components/searchbar';
