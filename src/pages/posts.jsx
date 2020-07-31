@@ -12,7 +12,6 @@ class PostsPage extends React.Component {
         super(props);
 
         this.state = {
-            isLoading: false,
             descending: true,
             pageTitle: '',
             posts: [],
