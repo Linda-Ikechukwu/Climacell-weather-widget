@@ -1,0 +1,84 @@
+body{
+  font-family: 'Raleway', sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px*/
+
+  @media screen and (max-width: 600px){
+    font-size: 50%; /*10px*/
+  }
+}
+
+h1{
+  color: rgb(90, 182, 205);
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.MuiTypography-h5,.MuiTypography-h6, .MuiTypography-body1{
+  
+  font-family: 'Raleway', sans-serif !important;
+
+}
+.MuiTypography-h5{
+  font-size:2rem !important;
+  font-weight: 400 !important;
+}
+.MuiTypography-subtitle1{
+  font-size:1.2rem !important;
+
+  & a{
+    color: rgb(90, 182, 205);
+  }
+}
+.MuiInputBase-input{
+  border: 1px solid grey !important;
+  border-radius: 4px;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  min-height:100vh;
+}
+
+.paper{
+  width: 80%;
+  min-height: 100vh;
+
+  @media screen and (max-width: 600px){
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  & h1{
+      text-align: center;
+  }
+};
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 'translate(-50%,-50%)';
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
