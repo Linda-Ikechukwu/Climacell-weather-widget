@@ -2,6 +2,11 @@ body{
   font-family: 'Raleway', sans-serif !important;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *{
@@ -26,7 +31,7 @@ h1{
 }
 
 .MuiTypography-h5,.MuiTypography-h6, .MuiTypography-body1{
-  
+
   font-family: 'Raleway', sans-serif !important;
 
 }
@@ -54,31 +59,5 @@ h1{
   min-height:100vh;
 }
 
-.paper{
-  width: 80%;
-  min-height: 100vh;
 
-  @media screen and (max-width: 600px){
-    width: 100%;
-    padding: 1.5rem;
-  }
-
-  & h1{
-      text-align: center;
-  }
-};
-
-.loader{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: 'translate(-50%,-50%)';
-}
-
-.flex{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
 
