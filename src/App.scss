@@ -1,31 +1,38 @@
-.weather-app{
+.weather-app {
     width: 630px;
     height: 400px;
-    border: 2px solid #F5F5FD;
+    border: 2px solid #f5f5fd;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
     position: relative;
 
-    @media screen and (max-width:600px){
+    &-home, &-error{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 600px) {
         width: 100vw;
     }
 }
-.weather-cards{
+.weather-cards {
     display: flex;
 
-    &>div{
+    & > div {
         display: flex;
     }
 
-    @media screen and (max-width:600px){
+    @media screen and (max-width: 600px) {
         width: 100%;
-        overflow-x:auto;
+        overflow-x: auto;
         -ms-overflow-style: none;
         scrollbar-width: none; /* Firefox */
 
-        &::-webkit-scrollbar{
-            display:none;
+        &::-webkit-scrollbar {
+            display: none;
         }
-
     }
 }
